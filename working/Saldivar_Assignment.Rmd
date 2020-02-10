@@ -10,3 +10,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
+I am taking this course for a few reasons. The first reason that I would like to be a better data scientist and improve my programing and coding skills. In this same line of thought I would like to be better using functions and learn how to create a package. I am also taking this class because I would like to be able to add the Environmental Data Science Focus to my Master's degree. 
+
+I have a little bit of a background in data science. I have taken data analysis in fall 2018 where I got an introduction to data science. Other data science course that I have completed are GIS and Advanced GIS and I am currently taking Advanced Data Analysis. From July 2019 to present I have been working at NCEAS as a data science intern. My projects at NCEAS have mostly involved using ArcGIS, but I have also learned the basics of using functions and creating packeages from NCEAS.
