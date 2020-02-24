@@ -13,9 +13,17 @@
 # @return, is the intrinsic growth rate of the population at a given size with a give harvesting rate.
 
 
+#Assignment #1 Details 
+# Include at least 2 inputs and several parameters (CHECK)
+# Add at least two different kinds of error checking (CHECK)
+# Add some error checking (at least 2 different kinds) (CHECK)
+# Save your function in a .R file (CHECK)
+# Adding comments to the function (CHECK)
+# In RMarkdown document, generate sample data for function in two different ways (CHECK)
+# Apply data to function (CHECK)
+# Graph and add some text describing how to interpret results 
 
-
-pop_grow_rate_w_harvest = function(population, hunters, growth_rate=0.05, carrying_capacity = 2000, attack_rate = 0.05, handling_time = 0.2) {
+popgrow = function(population, hunters, growth_rate=0.05, carrying_capacity = 2000, attack_rate = 0.05, handling_time = 0.2) {
   
   #make sure that population is not negative
   population = ifelse( (population < 0), return("population cannot be less than 0"), population )
