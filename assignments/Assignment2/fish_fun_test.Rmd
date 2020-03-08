@@ -1,0 +1,53 @@
+---
+title: "fish_fun_test"
+author: "Robert Saldivar"
+date: "3/7/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+#library(tidyverse) tidyverse is currently not working for me error, package ggplot not found.
+library(dplyr)
+library(tidyr)
+library(janitor)
+```
+
+
+The first thing I'm going to do is make data to be used in the function.
+```{r}
+#This is making a table for the price of different fish.
+
+fish_species <- c("Salmon", "Tuna", "Anchovy", "Herring", "Catfish")
+
+price <- c(120, 100, 50, 80, 75) #The price was created by me randomly picking numbers between 50 and 150.
+
+fish_price <- matrix(c(price), nrow = 5, ncol = 1, byrow = TRUE, dimnames = list(c(fish_species), c("price")))
+
+fish_price
+```
+
+```{r}
+# This is making a table to calculate the amount of fish caught at different locations.
+
+catch <- sample(10:250, 180, replace = TRUE)
+
+locations <- c("LA", "Honolulu", "Seattle", "Miami", "Anchorage", "Portland")
+
+catch_locations <- matrix(c(catch), nrow = 5, ncol = 6, dimnames = list(c(fish_species), c(locations)))
+
+
+```
+
+```{r}
+#Making a matrix based on the data that was generated
+
+fisheries <- merge(fish_price, catch_locations, by = "row.names") 
+
+
+
+```
+
